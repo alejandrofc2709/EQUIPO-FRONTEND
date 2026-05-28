@@ -1,7 +1,7 @@
 {% load static %}
-<header>
+<header class="header">
   <nav
-    class="navbar navbar-expand px-3 py-3 align-items-center justify-content-between shadow-sm"
+    class="navbar navbar-expand px-3 py-1 align-items-center justify-content-between shadow-sm"
   >
     <!-- Bloque izquierdo: Icono + nombre de usuario (personalizable) -->
     <div class="navbar d-flex align-items-center">
@@ -10,7 +10,7 @@
     
       
       {% block user_info %}
-      <span class="fw-semibold">{{ user.username|default:"Invitado" }}</span>
+      <span class="navbar nav-link">{{ user.username | default:"Invitado" }}</span>
       {% endblock %}
     </div>
 
@@ -22,7 +22,7 @@
         </a>
         <!-- Cerrar sesión -->
         <a href="{% url 'signout' %}" class="text-white fs-5" title="Cerrar sesión" data-bs-toggle="tooltip">
-            <img src="{% static 'images/cerrar_sesion.svg' %}" alt="Logout" width="30" height="30">
+            <img src="{% static 'images/cerrar_sesion.svg' %}" alt="Logout" idth="30" height="30">
         </a>
     </div>
 

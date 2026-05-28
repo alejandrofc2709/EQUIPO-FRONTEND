@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'gestion_cliente',
     'reportes',
     'django_cleanup.apps.CleanupConfig',
-    'bootstrap'
+    'bootstrap',
 ]
 
 MIDDLEWARE = [
