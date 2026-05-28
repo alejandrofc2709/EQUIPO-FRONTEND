@@ -8,9 +8,16 @@
       
       <img src="{% static 'images/usuario_perfil.svg' %}" alt="User Icon" width="30" height="30" class="me-2">
     
-      
       {% block user_info %}
-      <span class="navbar nav-link">{{ user.username | default:"Invitado" }}</span>
+        {% if user.is_authenticated %} 
+          {% if user.first_name %}
+            <span class="navbar nav-link"> Bienvenido, {{ user.first_name }} </span>
+          {% else %}
+            <span class="navbar nav-link"> Bienvenido, {{ user.username | default:"Bienvenido" }}</span>
+          {% endif %}
+        {% else %}
+          <span class="navbar nav-link"> Bienvenido </span>
+        {% endif %}
       {% endblock %}
     </div>
 
