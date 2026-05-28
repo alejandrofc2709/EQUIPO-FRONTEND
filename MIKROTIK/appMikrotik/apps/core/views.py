@@ -11,7 +11,7 @@ def home(request):
 @login_required
 def signout(request):
     logout(request)
-    return redirect('home')
+    return redirect('login')
 
 def signin(request):
     if request.method == 'POST':
