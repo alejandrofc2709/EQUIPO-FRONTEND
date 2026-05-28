@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'gestion_pago',
     'gestion_cliente',
     'reportes',
-    'django_cleanup.apps.CleanupConfig'
+    'django_cleanup.apps.CleanupConfig',
+    'bootstrap',
 ]
 
 MIDDLEWARE = [
